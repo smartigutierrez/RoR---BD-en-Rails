@@ -1,0 +1,25 @@
+<h2>Lista de documentales</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Documental</th>
+      <th scope="col">Sinopsis</th>
+      <th scope="col">Director</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @documentary.each do |documentary| %>
+    <tr>
+      <th scope="row"><%= documentary.name %></th>
+      <td><%= documentary.synopsis %></td>
+      <td><%= documentary.director %></td>
+    </tr>
+  <%end%>  
+  </tbody>
+</table>
+<br>
+
+
+
+  <%= link_to 'Crear un nuevo documental', new_documentary_path, class: 'btn btn-secondary' %>
+  <%= link_to 'Volver al inicio', root_path, class: 'btn btn-info' %>

@@ -1,0 +1,27 @@
+<h1>Lista de películas</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Películas</th>
+      <th scope="col">Sinopsis</th>
+      <th scope="col">Director</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @movies.each do |movie| %>
+    <tr>
+      <th scope="row"><%= movie.name %></th>
+      <td><%= movie.synopsis %></td>
+      <td><%= movie.director %></td>
+    </tr>
+  <%end%>  
+  </tbody>
+</table>
+
+<br>
+
+  <%= link_to 'Crear una nueva película', new_movie_path, class: 'btn btn-secondary' %>
+  <%= link_to 'Volver al inicio', root_path, class: 'btn btn-info' %>
+
+

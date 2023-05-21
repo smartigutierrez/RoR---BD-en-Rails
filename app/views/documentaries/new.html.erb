@@ -1,0 +1,32 @@
+<h1>Crear un nuevo documental</h1>
+<br>
+
+<%= form_with model: @documentary, method: :post do |form| %>
+    <div class="col-8">
+        <div>
+            <%= form.label :name, "Nombre del documental:", class: "form-label" %>
+            <%= form.text_field :name, class: "form-control" %>
+        </div>
+        <br>
+
+        <div>
+            <%= form.label :synopsis, "Sinopsis:", class: "form-label" %>
+            <%= form.text_field :synopsis, class: "form-control" %>
+        </div>
+        <br>
+
+        <div>
+            <%= form.label :director, "Director:", class: "form-label" %>
+            <%= form.text_field :director, class: "form-control" %>
+        </div>
+
+        <div>
+        <br>
+
+        <%= form.submit "Crear", class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
+
+<br>
+
